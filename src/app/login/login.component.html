@@ -7,10 +7,16 @@
     <mat-form-field appearance="outline">
       <mat-label>Email</mat-label>
       <input matInput placeholder="Enter your email." type="email" formControlName="email">
+      <mat-error *ngIf="emailError">
+        {{emailRMsg}}
+      </mat-error>
     </mat-form-field>
     <mat-form-field appearance="outline">
       <mat-label>Password</mat-label>
       <input matInput placeholder="Enter your password." type="password" formControlName="password">
+      <mat-error *ngIf="passwordError">
+        {{passwordMsg}}
+      </mat-error>
     </mat-form-field>
     <div class="login-button-row">
       <button mat-raised-button>Login</button>
