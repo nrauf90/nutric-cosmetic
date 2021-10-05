@@ -1,0 +1,24 @@
+.footer-links{
+  text-align: center;
+  border-top: 2px solid #d3d3d3;
+  padding: 20px;
+  margin-top: 50px;
+  a{
+    color: #454545;
+    margin: 10px;
+  }
+}
+.footer-copyright{
+  margin-top: 10px;
+  text-align: center;
+  .footer-storename{
+    font-size: 11px;
+    font-weight: 700;
+    font-style: normal;
+    color: #454545;
+    transition: color .2s ease-in-out;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+}

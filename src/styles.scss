@@ -1,0 +1,95 @@
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '~@angular/material' as mat;
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$nutri-cosmetic-primary: mat.define-palette(mat.$indigo-palette);
+$nutri-cosmetic-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$nutri-cosmetic-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$nutri-cosmetic-theme: mat.define-light-theme((
+  color: (
+    primary: $nutri-cosmetic-primary,
+    accent: $nutri-cosmetic-accent,
+    warn: $nutri-cosmetic-warn,
+  )
+));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($nutri-cosmetic-theme);
+
+/* You can add global styles to this file, and also import other style files */
+
+
+/**
+ * All the variables that can be used to extract Shopify global settings
+ */
+/* Colors */
+/* Typography */
+@font-face {
+  font-family: Futura;
+  font-weight: 700;
+  font-style: normal;
+  font-display: fallback;
+  src: url("https://fonts.shopifycdn.com/futura/futura_n7.153f8fffad8e901382179997bbb87aa7a5ff33b3.woff2?h1=dGhlbnV0cmljb3NtZXRpY2NvbXBhbnkuY29t&hmac=03960a0f55e75677ba6d5990fd16f6a1de609e41676926deb27f17a7e6841834") format("woff2"), url("https://fonts.shopifycdn.com/futura/futura_n7.711e9243b3eccc2745ecf4731eba61651a122376.woff?h1=dGhlbnV0cmljb3NtZXRpY2NvbXBhbnkuY29t&hmac=73f001eaa80743cf23a57aa56f1842bf8cae738246bc687a79cb4af2fa9ef762") format("woff");
+}
+
+@font-face {
+  font-family: Futura;
+  font-weight: 400;
+  font-style: normal;
+  font-display: fallback;
+  src: url("https://fonts.shopifycdn.com/futura/futura_n4.df36ce3d9db534a4d7947f4aa825495ed740e410.woff2?h1=dGhlbnV0cmljb3NtZXRpY2NvbXBhbnkuY29t&hmac=a7bc28f9669278d4ab43d9c09109a4859d33908a6b46c26ce368623bfb8d5f87") format("woff2"), url("https://fonts.shopifycdn.com/futura/futura_n4.6bce24beb4ba1ff4ddeb20f7cd6e2fa513a3d6ec.woff?h1=dGhlbnV0cmljb3NtZXRpY2NvbXBhbnkuY29t&hmac=204ddbc9120d1b6714dc6db5e9d7a42ca9bcc85a6742dd533b1ed9cdcb559cb1") format("woff");
+}
+
+@font-face {
+  font-family: Futura;
+  font-weight: 700;
+  font-style: normal;
+  font-display: fallback;
+  src: url("https://fonts.shopifycdn.com/futura/futura_n7.153f8fffad8e901382179997bbb87aa7a5ff33b3.woff2?h1=dGhlbnV0cmljb3NtZXRpY2NvbXBhbnkuY29t&hmac=03960a0f55e75677ba6d5990fd16f6a1de609e41676926deb27f17a7e6841834") format("woff2"), url("https://fonts.shopifycdn.com/futura/futura_n7.711e9243b3eccc2745ecf4731eba61651a122376.woff?h1=dGhlbnV0cmljb3NtZXRpY2NvbXBhbnkuY29t&hmac=73f001eaa80743cf23a57aa56f1842bf8cae738246bc687a79cb4af2fa9ef762") format("woff");
+}
+
+@font-face {
+  font-family: Futura;
+  font-weight: 400;
+  font-style: oblique;
+  font-display: fallback;
+  src: url("https://fonts.shopifycdn.com/futura/futura_o4.9747e2e6ed2f11b894984527c927b42234e48815.woff2?h1=dGhlbnV0cmljb3NtZXRpY2NvbXBhbnkuY29t&hmac=e951902eecba58431825318905cd8e76ce206d6d46b64c7828f0468a8e854c97") format("woff2"), url("https://fonts.shopifycdn.com/futura/futura_o4.d5edc6b1d9a050bbe0beb9093d73b883bf18c6c1.woff?h1=dGhlbnV0cmljb3NtZXRpY2NvbXBhbnkuY29t&hmac=1d193beb14d1d4ab0cc755f022ee591edca9eb562d2a7a4dc91f1301d4b065ff") format("woff");
+}
+
+@font-face {
+  font-family: Futura;
+  font-weight: 700;
+  font-style: oblique;
+  font-display: fallback;
+  src: url("https://fonts.shopifycdn.com/futura/futura_o7.ece1472e1fefbb598873ba72dc2bfa2e050347c1.woff2?h1=dGhlbnV0cmljb3NtZXRpY2NvbXBhbnkuY29t&hmac=fbb42f250560629768cd43a2dea1f5735d115a2aeb07ca4e605b1b3f098b917f") format("woff2"), url("https://fonts.shopifycdn.com/futura/futura_o7.7028291332320745f0217c346c800da7522a22b2.woff?h1=dGhlbnV0cmljb3NtZXRpY2NvbXBhbnkuY29t&hmac=35f30b22e9e6480720c02c9d7931e4e0c7ec6ad2d5b7982f60be3143c594971b") format("woff");
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Futura,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #454545;
+  background: #fff;
+  line-height: 1.65;
+}

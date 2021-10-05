@@ -1,0 +1,62 @@
+$small: 600px;
+$medium: 768px;
+.login-container{
+  width: 100%;
+  margin: 0 auto;
+  .login-wrapper{
+    text-align: center;
+    h1{
+      font-size: 30px;
+      text-transform: uppercase;
+    }
+  }
+  form{
+    width: 30% !important;
+    margin: 0 auto;
+    a{
+      color: #454545;
+    }
+  }
+  ::ng-deep {
+    .mat-form-field{
+      width: 100%;
+    }
+    .mat-form-field-appearance-outline {
+      .mat-form-field-outline-end {
+        border-radius: 0 !important;
+      }
+      .mat-form-field-outline-start{
+        border-radius: 0 !important;
+      }
+    }
+  }
+  .login-button-row {
+    button {
+      width: 100%;
+      background: #000;
+      color: #ffffff;
+      border-radius: 0;
+      text-transform: uppercase;
+      padding: 5px;
+    }
+  }
+  @media screen and (max-width: $medium) {
+    form {
+      width: 60% !important;
+      margin: 0 auto;
+    }
+  }
+  @media screen and (max-width: $small) {
+    //do Smth
+    width: 90%;
+    .login-wrapper {
+      h1 {
+        font-size: 20px;
+      }
+    }
+    form{
+      width: 90% !important;
+      margin: 0 auto;
+    }
+  }
+}
