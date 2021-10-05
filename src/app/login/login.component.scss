@@ -6,8 +6,10 @@ $medium: 768px;
   .login-wrapper{
     text-align: center;
     h1{
-      font-size: 30px;
+      font-size: 22px;
       text-transform: uppercase;
+      font-family: "Futura B";
+      letter-spacing: .2em;
     }
   }
   form{
@@ -51,7 +53,7 @@ $medium: 768px;
     width: 90%;
     .login-wrapper {
       h1 {
-        font-size: 20px;
+        font-size: 13px;
       }
     }
     form{
