@@ -1,0 +1,25 @@
+<div class="register-container">
+  <div class="register-wrapper">
+    <h1>Brand Partner Registration</h1>
+    <p>Register Process:</p>
+  </div>
+  <form method="post" style="width: 100%;" [formGroup]="addressForm" (submit)="updateAddress()">
+    <input  placeholder="location_address_line1" type="text" formControlName="location_address_line1">
+    <input type="text" formControlName="brand_address_type" value="Company">
+    <input  placeholder="location_address_line2" type="text" formControlName="location_address_line2">
+    <input  placeholder="location_city" type="text" formControlName="location_city">
+    <input  placeholder="location_state" type="text" formControlName="location_state">
+    <input  placeholder="location_zip" type="text" formControlName="location_zip">
+    <input  placeholder="location_country" type="text" formControlName="location_country">
+    <input  placeholder="brand_phone_number" type="text" formControlName="brand_phone_number">
+
+
+    <div class="login-button-row">
+      <button mat-raised-button>Post</button>
+    </div>
+    <p>
+      By signing-in you agree to The Nutricosmetic Company's <a href="#">Conditions of Use</a>. Please see our <a href="#">Privacy Policy</a>, and our <a href="#">Cookie Policy</a>.
+    </p>
+    <a href="#">Need Help?</a>
+  </form>
+</div>

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
+import { ApiService } from "../service/api.service";
+import { first } from "rxjs/operators";
 
 @Component({
   selector: 'app-login',
@@ -13,7 +15,7 @@ export class LoginComponent implements OnInit {
   */
   loginForm = new FormGroup({
     email: new FormControl('',[Validators.email, Validators.required]),
-    password: new FormControl('', [Validators.required, Validators.minLength(6)])
+    password: new FormControl('', [Validators.required, Validators.minLength(4)])
   });
 
   /*
@@ -24,7 +26,7 @@ export class LoginComponent implements OnInit {
   passwordError = false;
   passwordMsg = '';
 
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private formBuilder: FormBuilder, public apiService: ApiService) { }
 
   ngOnInit(): void {
 
@@ -33,13 +35,23 @@ export class LoginComponent implements OnInit {
   /*
   * Login function to validate and submit data
   */
-  login() {
+  userAuth() {
 
     /*
     * Validate input data before login
     */
     if(this.loginValidation()){
-      console.log(this.loginForm.value);
+      console.log(this.loginForm.get('email')?.value);
+      this.apiService.login(this.loginForm.get('email')?.value, this.loginForm.get('password')?.value)
+        .pipe(first())
+        .subscribe({
+          next: () => {
+            console.log('test')
+          },
+          error: error => {
+            console.log(error)
+          }
+        });
     }
 
   }

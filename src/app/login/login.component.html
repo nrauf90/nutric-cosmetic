@@ -3,17 +3,17 @@
     <h1>Brand Partner Registration</h1>
     <p>Please enter your e-mail and password:</p>
   </div>
-  <form style="width: 100%;" [formGroup]="loginForm" (submit)="login()">
+  <form method="post" style="width: 100%;" [formGroup]="loginForm" (submit)="userAuth()">
     <mat-form-field appearance="outline">
       <mat-label>Email</mat-label>
-      <input matInput placeholder="Enter your email." type="email" formControlName="email">
+      <input matInput  placeholder="Enter your email." type="email" formControlName="email">
       <mat-error *ngIf="emailError">
         {{emailRMsg}}
       </mat-error>
     </mat-form-field>
     <mat-form-field appearance="outline">
       <mat-label>Password</mat-label>
-      <input matInput placeholder="Enter your password." type="password" formControlName="password">
+      <input matInput  placeholder="Enter your password." type="password" formControlName="password">
       <mat-error *ngIf="passwordError">
         {{passwordMsg}}
       </mat-error>
