@@ -1,0 +1,179 @@
+$small: 600px;
+$medium: 768px;
+.login-container{
+  width: 100%;
+  margin: 0 auto;
+  .login-wrapper{
+    text-align: center;
+    h1{
+      font-size: 22px;
+      text-transform: uppercase;
+      font-family: "Futura B";
+      letter-spacing: .2em;
+    }
+  }
+  form{
+    width: 30% !important;
+    margin: 0 auto;
+    a{
+      color: #454545;
+    }
+  }
+  ::ng-deep {
+    .mat-form-field{
+      width: 100%;
+    }
+    .mat-form-field-appearance-outline {
+      .mat-form-field-outline-end {
+        border-radius: 0 !important;
+      }
+      .mat-form-field-outline-start{
+        border-radius: 0 !important;
+      }
+    }
+  }
+  .login-button-row {
+    button {
+      width: 100%;
+      background: #000;
+      color: #ffffff;
+      border-radius: 0;
+      text-transform: uppercase;
+      padding: 5px;
+    }
+  }
+  @media screen and (max-width: $medium) {
+    form {
+      width: 60% !important;
+      margin: 0 auto;
+    }
+  }
+  @media screen and (max-width: $small) {
+    //do Smth
+    width: 90%;
+    .login-wrapper {
+      h1 {
+        font-size: 13px;
+      }
+    }
+    form{
+      width: 90% !important;
+      margin: 0 auto;
+    }
+  }
+}
+
+
+.main-syc-company{
+padding-left: 100px;
+}
+.syc-company-page-title{
+ font-size: 22px;
+text-transform: uppercase;
+font-family: "Futura B";
+letter-spacing: .2em;
+}
+
+.syc-company-page-description{
+margin-top: 10px;
+font-size: 14px;  
+}
+.platform-card{
+margin-top: 60px;
+padding: 45px 15px 45px 15px;
+border:unset;
+border-radius:unset;
+box-shadow: 0 0 0 8px  #eceef6;
+background: #FAFBFC;
+margin-bottom: 20px;
+}
+
+.platform-card .feed-title{
+color: #252D44;
+font-size: 25px;
+font-weight: 300;
+}
+
+.description{
+color: #323232;
+font-size: 18px;
+font-weight: 300;
+}
+
+.platform .select-platform{
+padding-top: 30px;
+color: #252D44;
+font-size: 22px;
+font-weight: 300;
+}
+
+.platform-icon .card{
+border: 2px solid #DBE1EA;
+padding: 20px;
+background: #fff;
+}
+
+.platform-icon p{
+font-size: 10px;
+white-space: nowrap;
+}
+
+.select-platform-table td{
+  padding: 6px
+}
+
+.flex-parent {
+  display: flex;
+}
+
+.jc-center {
+  justify-content: end;
+}
+
+button.margin-right {
+  margin-right: 20px;
+}
+
+
+
+.form-padding{
+margin-left: 35px;
+}
+
+.platform-person-name label{
+color: #252D44;
+font-size: 15px;
+font-weight: 600;
+margin-bottom: 10px;
+}
+.platform-person-name .form-control{
+border-radius: 5px;
+border: 2px solid #DBE1EA;
+width: 100%;  
+}
+
+.platform-store-name label{
+color: #252D44;
+font-size: 15px;
+font-weight: 600;
+margin-top: 30px;
+margin-bottom: 10px;
+}
+.platform-store-name .form-control{
+border-radius: 5px;
+border: 2px solid #DBE1EA; 
+width: 100%; 
+}
+
+.platform-api-pass label{
+color: #252D44;
+font-size: 15px;
+font-weight: 600;
+margin-top: 20px;
+margin-bottom: 10px;
+}
+.platform-api-pass .form-control{
+border-radius: 5px;
+border: 2px solid #DBE1EA;
+width: 100%; 
+}
