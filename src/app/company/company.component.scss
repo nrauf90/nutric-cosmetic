@@ -4,17 +4,6 @@
 .m-8{
   margin-top: 60px;
 }
-.form-control{
-  height: 31px;
-}
-.col-form-label{
-  font-size: 15px;
-  font-color: #a1a0a0;
-}
-.imp-note{
- font-size: 15px;
-  font-color: #a1a0a0; 
-}
 
 .btn.btn-white{
     color: #000;
@@ -26,26 +15,9 @@
     font-weight: 800;
     border:1px solid #000;
 }
-.custom-radius{
 
-
-
-  border-radius: unset;
-}
-
-.another-btn{
-    color: #000;
-    background: #fff;
-    border-radius: 0;
-    padding: 6px 45px;
-    letter-spacing: 2px;
-    font-size: 10px;
-    font-weight: 800;
-    border:1px solid #000;
-    margin-left: 154px;
-}
 .col-form-label-custom{
- padding-left: 1px;
+ padding-left: 30px;
 }
 .flex-parent {
   display: flex;
@@ -53,7 +25,6 @@
 
 .jc-center {
   justify-content: end;
-
 }
 
 button.margin-right {
