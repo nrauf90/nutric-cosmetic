@@ -62,3 +62,40 @@ $medium: 768px;
     }
   }
 }
+
+
+ h5{
+  font-family: 'Futura B';
+}
+.m-8{
+  margin-top: 60px;
+}
+.btn.btn-black{
+      display: block;
+    margin: auto;
+    color: #fff;
+    background: #000;
+    border-radius: 0;
+    padding: 6px 45px;
+    margin-top: 50px;
+    letter-spacing: 2px;
+}
+.productInfo_section {
+  background-color: white;
+  width: 1100px;
+  border: 1px solid lightgrey;
+  padding: 40px;
+  margin: 20px;
+}
+#product_type{
+      width: 250px;
+    height: 35px;
+    border-style: solid;
+    border-color: #a1a0a0;
+}
+.bar {
+
+      width: 250px !important;
+    height: 35px!important;
+    margin-left: 78px;
+}

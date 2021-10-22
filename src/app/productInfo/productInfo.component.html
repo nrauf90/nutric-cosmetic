@@ -1,0 +1,232 @@
+<div class="container">
+<h1 class="page-title">PRODUCT INFORMATION (1 OF 10)</h1>
+<p>please complete the fields below</p>
+
+<section class= "productInfo_section " >
+	<div class="row">
+
+	<h5>TITLE</h5><br>
+	<div class="col-lg-2">
+	<label>Product Title* </label>
+	<label>Brief Product Description*</label>
+</div>
+	<div class="col-lg-10">
+		<div class="row">
+		<div class="col-lg-8"> 
+		<input type="text" name="product_name" class="form-control input-design-1">
+		<input type="text" name="product_desc" class="form-control input-design-1" placeholder="Please enter between 3-7 characters">
+		</div>
+		<div class="col-lg-4">
+			<a href="#">Need Help?</a>
+		</div>
+	</div>
+	</div>
+	</div>
+	
+	
+	
+	  <label for="product_type">Product Type*</label>
+  <select name="product_type" id="product_type">
+    <option value="other">Other</option>
+    <option value="A">A</option>
+    <option value="B">B</option>
+  </select><br>
+  <input type="text" name="product_type" class="form-control input-design bar" placeholder="Please specify"><br>
+  <input type="checkbox" id="variants" name="variants" value="product">
+  <label for="variants"> &nbsp;  Does This Product Have Variants</label><br>
+
+</section>
+<br>
+<section class="productInfo_section">
+	<h5>PRICING</h5><br>
+	<label>RRP*</label>
+	<input type="number" name="price" class="form-control input-design-1" placeholder="0.00"><br>
+	<label>Price Excl.Tax</label>
+	<input type="number" name="price_excl_tax" class="form-control input-design-1" placeholder="please leave this box blank"> 
+	<a href="#">How Is The Price Shown on Website?</a><br>
+	<label>Sale Tax Rate</label>
+	<input type="number" name="sale_tax_rate" class="form-control input-design-1" placeholder="20%"> <br>
+	<label> Sale Tax Type</label>
+	<select name="sale_tax_type" id="sale_tax_type">
+    <option value="VAT">VAT</option>
+    <option value="A">A</option>
+    <option value="B">B</option>
+  </select>
+   <br>
+    <label>Base Currency*</label>
+    <select name="base_currency" id="base_currency">
+    <option value="GBP">GBP</option>
+    <option value="A">A</option>
+    <option value="B">B</option>
+  </select>
+   <br>
+   <button type="button" class="btn btn-dark">ADD ANOTHER CURRENCY</button>
+   <br>
+   <label>Price Excl.Tax</label>
+   <input type="number" name="price_excl_tax" class="form-control input-design-1" placeholder="0.00"> <br>
+    <label>Currency*</label>
+    <select name="currency" id="currency">
+    <option value="GBP">GBP</option>
+    <option value="A">A</option>
+    <option value="B">B</option>
+  </select><br>
+  <p><i>*Our system will calculate the tax based on the country of destination</i></p>
+  
+  <label>Cost Per Item*</label>
+   <input type="number" name="price_excl_tax" class="form-control input-design-1" placeholder="0.00"> <a href="#">Why Do We Need This?</a><br>
+   <p><i>*This is for insurance & admin purpose only</i></p>
+  
+</section>
+<br>
+<section class="productInfo_section">
+
+<h5>SHIPPING</h5><br>
+<label>Weight*</label>
+<input type="number" name="weight" class="form-control input-design-1" placeholder="0.0">
+<select name="weight" id="weight">
+    <option value="g">g</option>
+    <option value="k">k</option>
+    <option value="kg">kg</option>
+  </select><br> 
+
+<label> Dimension*</label>
+ <input type="number" name="dimension" class="form-control input-design-1" placeholder="">
+<select name="dimension" id="dimension">
+    <option value="g">g</option>
+    <option value="k">k</option>
+    <option value="kg">kg</option>
+  </select><br> 
+
+   <label>Country of Origin</label>
+   <input type="text" name="country_of_origin" class="form-control input-design-1" placeholder="Select country or region"><br>
+
+   <label>HS(Harmonized System) Code*</label>
+   <input type="number" name="HS_code" class="form-control input-design-1" placeholder="Search or enter HS code"><br>
+   <p><i>*Manually enter the codes that are longer than 6 numbers</i></p><br>
+
+   <label>Prohibited Countries*</label>
+   <input type="text" name="prohibited_country" class="form-control input-design-1" placeholder="Select country or region"> <a href="#">What Does This Mean?</a><br> 
+
+</section>
+<br>
+
+<section class="productInfo_section">
+	<h5>PRODUCT SPECIFICATIONS</h5><br>
+	  <label for="product_category">Product Category*</label>
+  <select name="product_category" id="product_category">
+    <option value="cosmetics">Cosmetics</option>
+    <option value="consumable">Consumable</option>
+    <option value="accessory">Accessory</option>
+     <option value="apparel">Apparel</option>
+      <option value="technology">Technology</option>
+  </select><br>
+<br>
+  <p>From the following,please select which apply to the product:</p><br>
+
+   <input type="checkbox" id="category" name="category" value="category">
+  <label for="category"> &nbsp;  Alcohol Free</label><br>
+<input type="checkbox" id="category" name="category" value="category">
+  <label for="category"> &nbsp;  Oil Free</label><br>
+  <input type="checkbox" id="category" name="category" value="category">
+  <label for="category"> &nbsp;  Fragrance Free</label><br>
+  <input type="checkbox" id="category" name="category" value="category">
+  <label for="category"> &nbsp;  Paraben Free</label><br>
+  <input type="checkbox" id="category" name="category" value="category">
+  <label for="category"> &nbsp;  Silicone Free</label><br>
+  <input type="checkbox" id="category" name="category" value="category">
+  <label for="category"> &nbsp;  Sulphate Free</label><br>
+  <input type="checkbox" id="category" name="category" value="category">
+  <label for="category"> &nbsp;  Palm Oil Free</label><br>
+  <input type="checkbox" id="category" name="category" value="category">
+  <label for="category"> &nbsp; Non Comedogenic</label><br>
+  <input type="checkbox" id="category" name="category" value="category">
+  <label for="category"> &nbsp;  Hypo-Allergenic</label><br>
+  <input type="checkbox" id="category" name="category" value="category">
+  <label for="category"> &nbsp;  Determatological Tested</label><br>
+  <input type="checkbox" id="category" name="category" value="category">
+  <label for="category"> &nbsp;  Clinically Proven</label><br>
+  <input type="text" name="category" class="form-control input-design-1" placeholder="Please upload result here"><br>
+
+  <label>Is This Product Not Suiable For AnOne In Particular:</label>
+  <input type="text" name="category" class="form-control input-design-1" placeholder="Please specify here"><a href="#">What Does This Mean?</a><br> 
+
+</section>
+<br>
+<section class="productInfo_section">
+	<h5>HELP US GET TO KNOW YOUR PRODUCT</h5><br>
+	<p>From the following,please select which apply to the product:</p><br>
+
+  <label>Limit Options</label> &nbsp;&nbsp; <input type="checkbox" id="category" name="category" value="category">
+  <label for="category"> &nbsp;  It's great for Skin</label><br>
+  <input type="checkbox" id="category" name="category" value="category">
+  <label for="category"> &nbsp; It's amazing for hairs & nails </label><br>
+  <input type="checkbox" id="category" name="category" value="category">
+  <label for="category"> &nbsp;  It's fab for the mind</label><br>
+  <input type="checkbox" id="category" name="category" value="category">
+  <label for="category"> &nbsp;  The body needs this</label><br>
+  <input type="checkbox" id="category" name="category" value="category">
+  <label for="category"> &nbsp;  If you are looking for wellness,this is it</label><br>
+  <input type="checkbox" id="category" name="category" value="category">
+  <label for="category"> &nbsp;  This is a lifestyle product or accessory</label><br>
+  <input type="checkbox" id="category" name="category" value="category">
+  <label for="category"> &nbsp;  This is apparel or an accessory</label><br>
+  <hr>
+  <br>
+  <h5>SKIN</h5>
+  <p>Which Product Statement is true:</p>
+ <br>
+ <input type="checkbox" id="category" name="category" value="category">
+  <label for="category"> &nbsp;  I help with rediance & glow</label><br>
+  <input type="checkbox" id="category" name="category" value="category">
+  <label for="category"> &nbsp; I help to brighten skin</label><br>
+  <input type="checkbox" id="category" name="category" value="category">
+  <label for="category"> &nbsp;  I boost elasticity and hydration</label><br>
+  <input type="checkbox" id="category" name="category" value="category">
+  <label for="category"> &nbsp;  I'm best for anti-ageing</label><br>
+  <input type="checkbox" id="category" name="category" value="category">
+  <label for="category"> &nbsp;  I'm all about prebiotics & probiotics for skin</label><br>
+  <input type="checkbox" id="category" name="category" value="category">
+  <label for="category"> &nbsp;  I helped with inflamed skin</label><br>
+  <input type="checkbox" id="category" name="category" value="category">
+  <label for="category"> &nbsp;  I'm great for acne & congestion</label><br>
+  <input type="checkbox" id="category" name="category" value="category">
+  <label for="category"> &nbsp;  I work well with eczema and rocsea</label><br>
+  <input type="checkbox" id="category" name="category" value="category">
+  <label for="category"> &nbsp; I aid balancing and detoxing </label><br>
+  <input type="checkbox" id="category" name="category" value="category">
+  <label for="category"> &nbsp;  I helped with sun damage and pigmentation</label><br>
+  <input type="checkbox" id="category" name="category" value="category">
+  <label for="category"> &nbsp;  I'm best for normal skin</label><br>
+  <input type="checkbox" id="category" name="category" value="category">
+  <label for="category"> &nbsp;  I'm best for combination skin</label><br>
+  <input type="checkbox" id="category" name="category" value="category">
+  <label for="category"> &nbsp;  I'm best for oily skin</label><br>
+  <input type="checkbox" id="category" name="category" value="category">
+  <label for="category"> &nbsp;  I'm best for dry skin</label><br>
+  <input type="checkbox" id="category" name="category" value="category">
+  <label for="category"> &nbsp;  I'm best for sensitive skin</label><br>
+  <input type="checkbox" id="category" name="category" value="category">
+  <label for="category"> &nbsp;  I'm best for mature skin</label>
+</section>
+<br>
+
+<section class="productInfo_section">
+	<h5>INGREDIENTS</h5>
+	<p>Please copy & paste the ingredients for the product below:</p><br>
+      <a href="#">Why Do We Ask For This?</a>
+      <div class="form-group">
+    <label for="exampleFormControlTextarea1"></label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" cols="3" placeholder="Please paste ingredients here, separting each ingredient with a comma"></textarea>
+  </div>
+
+</section>
+<br>
+
+<section class="productInfo_section">
+	<h5>E-COMMERCE IMAGES</h5><br>
+	<p>please upload front and back image of the product:</p>
+</section>
+<button style="margin:5px;" class="btn btn-light">Cancel</button>
+<button class="btn btn-dark">Save</button><br>
+<button class="btn btn-dark btn-lg">Next Product ></button>
+</div>

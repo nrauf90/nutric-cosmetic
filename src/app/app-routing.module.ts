@@ -4,6 +4,10 @@ import {LoginComponent} from "./login/login.component";
 import {RegisterComponent} from "./register/register.component";
 import {AddressComponent} from "./address/address.component";
 import {BillingComponent} from "./billing/billing.component";
+import {CompanyComponent} from "./company/company.component";
+import {ProductInfoComponent} from "./productInfo/productInfo.component";
+import {ProductsComponent} from "./products/products.component";
+import {SyncingComponent} from "./syncing/syncing.component";
 
 const routes: Routes = [
   { path: '', component: LoginComponent },
@@ -11,7 +15,10 @@ const routes: Routes = [
   { path: 'register', component: RegisterComponent },
   { path: 'manage-address', component: AddressComponent },
   { path: 'manage-billing', component: BillingComponent },
-  { path: '**', component: LoginComponent }
+  { path: 'company', component: CompanyComponent },
+  { path: 'product-info', component: ProductInfoComponent },
+  { path: 'products', component: ProductsComponent },
+  { path: 'syncing', component: SyncingComponent }
 ];
 
 @NgModule({

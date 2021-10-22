@@ -43,7 +43,7 @@ export class ApiService {
     return this.http.post<User>(`${environment.apiURL}user/detail`,{login_id})
       .pipe(
         map(user => {
-          this.userSubject.next(user);
+          //this.userSubject.next(user);
           return user;
         })
       )

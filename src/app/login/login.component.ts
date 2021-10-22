@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormControl, FormGroup, Validators} from "@angular/forms";
 import { ApiService } from "../service/api.service";
 import { first } from "rxjs/operators";
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'app-login',
@@ -26,7 +27,7 @@ export class LoginComponent implements OnInit {
   passwordError = false;
   passwordMsg = '';
 
-  constructor(private formBuilder: FormBuilder, public apiService: ApiService) { }
+  constructor(private formBuilder: FormBuilder, public apiService: ApiService,private router: Router) { }
 
   ngOnInit(): void {
 
@@ -45,8 +46,8 @@ export class LoginComponent implements OnInit {
       this.apiService.login(this.loginForm.get('email')?.value, this.loginForm.get('password')?.value)
         .pipe(first())
         .subscribe({
-          next: () => {
-            console.log('test')
+          next: (result) => {
+            this.router.navigate(['/register']);
           },
           error: error => {
             console.log(error)

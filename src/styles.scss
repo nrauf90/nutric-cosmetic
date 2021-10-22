@@ -24,8 +24,8 @@ $nutri-cosmetic-theme: mat.define-light-theme((
     primary: $nutri-cosmetic-primary,
     accent: $nutri-cosmetic-accent,
     warn: $nutri-cosmetic-warn,
-  )
-));
+    )
+  ));
 
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
@@ -36,8 +36,8 @@ $nutri-cosmetic-theme: mat.define-light-theme((
 
 
 /**
- * All the variables that can be used to extract Shopify global settings
- */
+* All the variables that can be used to extract Shopify global settings
+*/
 /* Colors */
 /* Typography */
 
@@ -77,4 +77,55 @@ body {
   background: #fff;
   line-height: 1.65;
   font-size: 14px;
+}
+@import "~bootstrap/dist/css/bootstrap.css";
+@import "~font-awesome/css/font-awesome.css";
+
+.page-title{
+  font-family: 'Futura B';
+  letter-spacing: 10px;
+}
+p{
+  font-family: 'Futura';
+  font-size:18px;
+}
+a{
+  font-family: "Futura";
+  color: #454545;
+}
+ul{
+  padding:0;
+  list-style: square inside url('data:image/gif;base64,R0lGODlhBQAKAIABAAAAAP///yH5BAEAAAEALAAAAAAFAAoAAAIIjI+ZwKwPUQEAOw==');
+}
+ul li{
+ font-family: 'Futura';
+ font-size:18px;
+
+}
+input[type=text]{
+  width: 50%;
+  border-radius: 0;
+  padding: 4px 10px;
+}
+
+.btn.btn-black{
+color: #fff;
+background: #000;
+border-radius: 0;
+padding: 6px 45px;
+letter-spacing: 2px;
+font-size: 10px;
+font-weight: 800;
+border:1px solid #000;
+}
+
+.btn.btn-white{
+    color: #000;
+    background: #fff;
+    border-radius: 0;
+    padding: 6px 45px;
+    letter-spacing: 2px;
+    font-size: 10px;
+    font-weight: 800;
+    border:1px solid #000;
 }

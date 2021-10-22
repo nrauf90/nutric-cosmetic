@@ -1,0 +1,70 @@
+ h5{
+  font-family: 'Futura B';
+}
+.fulfilment-type{
+  margin-top: 60px;
+}
+.fbu-detail-col{
+  padding: 12px 72px;
+}
+.fbu-detail-wrapper {
+  align-items: center;
+  justify-content: center;
+}
+.fbu-detail-col .fbu-img{
+  width: 80%;
+  height: 200px;
+  display: block;
+  margin:auto;
+  border:1px solid #000;
+}
+.fbu-detail-col p{
+  text-align: center;
+  padding: 10px 0;
+}
+.brand-detail-table{
+  width: 100%;
+}
+.brand-detail-table p{ 
+margin-bottom: 0;
+}
+.brand-detail-table tr, .brand-detail-table td{
+  border: 1px solid #b9b8b8;
+  border-collapse: collapse;
+}
+.brand-detail-table .tabel-label{
+  text-align: right;
+  vertical-align: text-top;
+}
+.brand-detail-table td {
+  padding: 10px 10px 0px 10px;
+}
+.brand-detail-table .tabel-label-normal{
+ text-align: right;
+ vertical-align: middle;
+
+}
+.table-col-normal td{
+   padding: 5px 10px;
+}
+.company_aggrement{
+ font-family: 'Futura';
+ font-size:18px;
+}
+.table-col-normal{
+  padding: 0;
+}
+.brand-detail-table input[type=text]{
+  width: 50%;
+  border-radius: 0;
+}
+.btn.btn-black{
+      display: block;
+    margin: auto;
+    color: #fff;
+    background: #000;
+    border-radius: 0;
+    padding: 6px 45px;
+    margin-top: 50px;
+    letter-spacing: 2px;
+}

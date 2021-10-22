@@ -1,26 +1,246 @@
-<div class="register-container">
-  <div class="register-wrapper">
-    <h1>Brand Partner Registration</h1>
-    <p>Register Process:</p>
-  </div>
-  <form method="post" style="width: 100%;" [formGroup]="registerForm" (submit)="userRegister()">
-    <input matInput  placeholder="Enter your email." type="email" formControlName="brand_email_address">
-    <input  placeholder="brand_display_name"  type="text" formControlName="brand_display_name">
-    <input  placeholder="brand_company_name" type="text" formControlName="brand_company_name">
-    <input  placeholder="brand_director_name" type="text" formControlName="brand_director_name">
-    <input  placeholder="brand_phone_number" type="text" formControlName="brand_phone_number">
-    <input  placeholder="brand_mobile_number" type="text" formControlName="brand_mobile_number">
-    <input  placeholder="brand_first_name" type="text" formControlName="brand_first_name">
-    <input  placeholder="brand_last_name" type="text" formControlName="brand_last_name">
-    <input  placeholder="brand_website_url" type="text" formControlName="brand_website_url">
+<form method="post" style="width: 100%;" [formGroup]="registerForm" (submit)="userRegister()">
+  <div *ngIf="showMainContent" class="container">
+<h1 class="page-title">REGISTER & START SELLING</h1>
+<p>Please have the following before you begin</p>
+<ul class="registration-req-info">
+	<li>Your business name, address and contact information</li>
+	<li>Your tax identity information</li>
+	<li>Your billing information, including valid billing address, IBAN and BIC</li>
+	<li>Full inventory list, including pricing, weight, HS codes and e-commerce industry pack shot images.</li>
+</ul>
+<p> If you are located outside of the United kingdom, you also need to read and comply with this important <a href="#">Notice For International Sellers</a>
+</p>
+<p> If you cannot comply with the requirements of this registration, please do not continue with this registration process until you have gathered the relevant information.
+</p>
+<section class="fulfilment-type">
+	<h5>FULFILMENT TYPE</h5>
+	<p>Please select your fulfilment type</p>
+	<div class="row fbu-detail-wrapper">
+		<div class="col-md-4 fbu-detail-col">
+			<div class="fbu-img">
+			</div>
+			<p>A fulfilment solution provided by the Nutricosmetic Company</p>
+		</div>
+		<div class="col-md-4 fbu-detail-col">
+			<div class="fbu-img">
+			</div>
+			<p>Self-service fulfilment option for our Brand Partner</p>
+		</div>
+	</div>
+</section>
+<section class="mt-5">
+	<h5 class="mb-4">BRAND PARTNER AFREEMENT</h5>
+	  <table class=" brand-detail-table">
+		<tr>
+			<td class="tabel-label">
+				<p>Company Name</p>
+			</td>
+			<td>
+				<input type="text" required="required" formControlName="brand_company_name" class="form-control input-design-1" placeholder="Campany Name Here">
+				<p class="warning"><mat-error *ngIf="companyError">
+          {{companyMsg}}
+        </mat-error></p>
+			</td>
+		</tr>
+		<tr>
+			<td class="tabel-label">
+				<p>Company Director Name</p>
+			</td>
+			<td>
+				<input type="text" required="required" formControlName="brand_director_name" class="form-control input-design-1" placeholder="Your FUll Name Here">
+				<p class="warning"><mat-error *ngIf="directorError">
+          {{directorMsg}}
+        </mat-error></p>
+			</td>
+		</tr>
+		<tr class="table-col-normal">
+			<td class="tabel-label-normal">
+				<p>The Nutricosmetic Company Marketplace Service Agreement</p>
+			</td>
+			<td>
+				<label class="company_aggrement">
+				<input type="checkbox" required="required" formControlName="company_aggrement" value="1" name="company_aggrement" >
+				I have read and accepted the terms and conditions of the <a href="#">Agreement</a>
+				</label>
+			</td>
+		</tr>
+	</table>
 
+</section>
 
-    <div class="login-button-row">
-      <button mat-raised-button>Post</button>
-    </div>
-    <p>
-      By signing-in you agree to The Nutricosmetic Company's <a href="#">Conditions of Use</a>. Please see our <a href="#">Privacy Policy</a>, and our <a href="#">Cookie Policy</a>.
-    </p>
-    <a href="#">Need Help?</a>
-  </form>
+<button (click)="ShowHideButton()" class="btn btn-black">CONTINUE</button>
 </div>
+
+<div class="container" *ngIf="!showMainContent">
+  <h1 class="page-title">Company Information</h1>
+  <p>Tell us about the Company</p>
+
+  <section class="m-8">
+    <h5>ABOUT THE COMPANY</h5>
+    <p>Please select your fulfilment type</p>
+      <input type="hidden" formControlName="brand_address_type" value="Company">
+      <div class="row">
+        <div class="col-lg-5 About The Company">
+          <div class="form-group row mb-3">
+            <label for="colFormLabelSm" class="col-sm-4 col-form-label-custom col-form-label">Brand Display Name*</label>
+            <div class="col-sm-8">
+              <input type="email" class="form-control form-control-sm custom-radius" formControlName="brand_display_name" id="colFormLabelSm" >
+            </div>
+          </div>
+          <div class="form-group row  mb-3">
+            <label for="colFormLabel" class="col-sm-4 col-form-label-custom col-form-label">First Name*</label>
+            <div class="col-sm-8">
+              <input type="email" class="form-control custom-radius" id="colFormLabel"  formControlName="brand_first_name" >
+            </div>
+          </div>
+          <div class="form-group row  mb-3">
+            <label for="colFormLabel" class="col-sm-4 col-form-label-custom col-form-label">Address Line One*</label>
+            <div class="col-sm-8">
+              <input type="email" class="form-control custom-radius" formControlName="location_address_line1" id="colFormLabel">
+            </div>
+          </div>
+
+          <div class="form-group row  mb-3">
+            <label for="colFormLabel" class="col-sm-4 col-form-label-custom col-form-label">City*</label>
+            <div class="col-sm-8">
+              <input type="email" class="form-control custom-radius" formControlName="location_city" id="colFormLabel">
+            </div>
+          </div>
+          <div class="form-group row  mb-3">
+            <label for="colFormLabel" class="col-sm-4 col-form-label-custom col-form-label">Country*</label>
+            <div class="col-sm-8">
+              <input type="email" class="form-control custom-radius" formControlName="location_country" id="colFormLabel">
+            </div>
+          </div>
+          <div class="form-group row  mb-3">
+            <label for="colFormLabel" class="col-sm-4 col-form-label-custom col-form-label">Phone Number*</label>
+            <div class="col-sm-8">
+              <input type="email" class="form-control custom-radius" formControlName="brand_phone_number" id="colFormLabel">
+            </div>
+          </div>
+          <div class="form-group row  mb-3">
+            <label for="colFormLabel" class="col-sm-4 col-form-label-custom col-form-label">Website URL</label>
+            <div class="col-sm-8">
+              <input type="email" class="form-control custom-radius" formControlName="brand_website_url" id="colFormLabel">
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5">
+          <div class="form-group row  mb-3">
+            <label for="colFormLabelSm" class="col-sm-4 col-form-label-custom col-form-label">Tax ID*</label>
+            <div class="col-sm-8">
+              <input type="email" class="form-control  custom-radius form-control-sm"  formControlName="brand_tax_id" id="colFormLabelSm">
+            </div>
+          </div>
+          <div class="form-group row  mb-3">
+            <label for="colFormLabelSm" class="col-sm-4 col-form-label-custom col-form-label">Last Name*</label>
+            <div class="col-sm-8">
+              <input type="email" class="form-control custom-radius form-control-sm" formControlName="brand_last_name" id="colFormLabelSm">
+            </div>
+          </div>
+          <div class="form-group row  mb-3">
+            <label for="colFormLabelSm" class="col-sm-4 col-form-label-custom col-form-label">Address line Two*</label>
+            <div class="col-sm-8">
+              <input type="email" class="form-control  custom-radius form-control-sm" formControlName="location_address_line2" id="colFormLabelSm">
+            </div>
+          </div>
+          <div class="form-group row  mb-3">
+            <label for="colFormLabelSm" class="col-sm-4 col-form-label-custom col-form-label">Sate*</label>
+            <div class="col-sm-8">
+              <input type="email" class="form-control  custom-radius form-control-sm" formControlName="location_state" id="colFormLabelSm">
+            </div>
+          </div>
+          <div class="form-group row  mb-3">
+            <label for="colFormLabelSm" class="col-sm-4 col-form-label-custom col-form-label">Zip*</label>
+            <div class="col-sm-8">
+              <input type="email" class="form-control  custom-radius form-control-sm" formControlName="location_zip" id="colFormLabelSm" >
+            </div>
+          </div>
+          <div class="form-group row  mb-3">
+            <label for="colFormLabelSm" class="col-sm-4 col-form-label-custom col-form-label">Mobile Number*</label>
+            <div class="col-sm-8">
+              <input type="email" class="form-control  custom-radius form-control-sm" formControlName="brand_mobile_number" id="colFormLabelSm">
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+</div>
+</form>
+  <section class="mt-5">
+    <h5 class="mb-4">YOUR FULFILMENT LOCATION</h5>
+    <form  class="form-padding">
+      <input type="hidden" formControlName="brand_address_type" value="Fulfilment">
+      <div class="row">
+        <div class="col-lg-5">
+
+          <div class="form-group row  mb-3">
+            <label for="colFormLabel" class="col-sm-4 col-form-label-custom col-form-label">Address Line One</label>
+            <div class="col-sm-8">
+              <input type="email" class="form-control   custom-radius" formControlName="location_address_line1" id="colFormLabel">
+            </div>
+          </div>
+
+          <div class="form-group row  mb-3">
+            <label for="colFormLabel" class="col-sm-4 col-form-label-custom col-form-label">City*</label>
+            <div class="col-sm-8">
+              <input type="email" class="form-control  custom-radius custom-radius" formControlName="location_city" id="colFormLabel" >
+            </div>
+          </div>
+
+          <div class="form-group row  mb-3">
+            <label for="colFormLabel" class="col-sm-4 col-form-label-custom col-form-label">Country</label>
+            <div class="col-sm-8">
+              <input type="email" class="form-control  custom-radius custom-radius" formControlName="location_country" id="colFormLabel">
+            </div>
+          </div>
+
+          <div class="form-group row  mb-3">
+            <label for="colFormLabel" class="col-sm-4 col-form-label-custom col-form-label">Phone Number</label>
+            <div class="col-sm-8">
+              <input type="email" class="form-control custom-radius custom-radius" formControlName="brand_phone_number" id="colFormLabel">
+            </div>
+          </div>
+
+          <div class="flex-parent jc-left">
+            <button  class=" another-btn btn-white green margin-left">ADD ANOTHER LOCATION</button>
+
+          </div>
+
+        </div>
+        <div class="col-lg-5">
+          <div class="form-group row  mb-3">
+            <label for="colFormLabel" class="col-sm-4 col-form-label-custom col-form-label">Address Line Two</label>
+            <div class="col-sm-8">
+              <input type="email" class="form-control  custom-radius" formControlName="location_address_line2" id="colFormLabel">
+
+            </div>
+          </div>
+
+          <div class="form-group row  mb-3">
+            <label for="colFormLabel" class="col-sm-4 col-form-label-custom col-form-label">Sate</label>
+            <div class="col-sm-8">
+              <input type="email" class="form-control custom-radius" formControlName="location_state" id="colFormLabel">
+            </div>
+          </div>
+          <div class="form-group row  mb-3">
+            <label for="colFormLabel" class="col-sm-4 col-form-label-custom col-form-label">Zip*</label>
+            <div class="col-sm-8">
+              <input type="email" class="form-control custom-radius" formControlName="location_zip" id="colFormLabel">
+            </div>
+          </div>
+
+        </div>
+        <div class="col-lg-2"> <u class="imp-note">Why Do We Need This?</u> </div>
+
+      </div>
+    </form>
+  </section>
+
+  <div class="flex-parent jc-center">
+    <button type="reset" class=" btn btn-white green margin-right">Cancel</button>
+    <button mat-raised-button class="btn btn-black magenta">Save</button>
+  </div>
+
+
+

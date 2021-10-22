@@ -23,12 +23,14 @@ export class RegisterComponent implements OnInit {
     brand_first_name: new FormControl('',[Validators.required]),
     brand_last_name: new FormControl('',[Validators.required]),
     brand_tax_id: new FormControl('',[Validators.required]),
-    brand_website_url: new FormControl('',[Validators.required])
+    brand_website_url: new FormControl('',[Validators.required]),
+    company_aggrement: new FormControl('',[Validators.required])
   });
 
   /*
  * Validation variables
  */
+  error = true;
   emailError = false;
   emailRMsg = '';
   companyError = false;
@@ -40,6 +42,7 @@ export class RegisterComponent implements OnInit {
   firstNameError = false;
   firstNameMsg = '';
   loginuserId = 1;
+  showMainContent: Boolean = true;
 
   constructor(private formBuilder: FormBuilder, public apiService: ApiService) { }
 
@@ -47,12 +50,17 @@ export class RegisterComponent implements OnInit {
     this.getBrandDetail();
     console.info(this.getBrandDetail());
   }
+  ShowHideButton() {
+    if(this.signupFirstStepValidation()) {
+      this.showMainContent = this.showMainContent ? false : true;
+    }
+  }
   getBrandDetail(){
 
     this.apiService.getBrandDetail(this.loginuserId)
       .pipe(first())
       .subscribe(
-          x => this.registerForm.patchValue(x)
+          //x => this.registerForm.patchValue(x)
       );
   }
 
@@ -113,5 +121,23 @@ export class RegisterComponent implements OnInit {
     return true;
   }
 
+  signupFirstStepValidation(){
+    this.error = true;
+    /*
+    * Email validation before login
+    */
 
+    if(this.registerForm.get('brand_company_name')?.hasError('required')){
+      this.companyError = true;
+      this.error = false;
+      this.companyMsg = 'Compnay Name is required.'
+    }
+    if(this.registerForm.get('brand_director_name')?.hasError('required')){
+      this.directorError = true;
+      this.directorMsg = 'Director Name is required.'
+      this.error = false;
+    }
+
+    return this.error;
+  }
 }
