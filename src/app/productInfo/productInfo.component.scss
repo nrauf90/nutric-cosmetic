@@ -70,13 +70,62 @@ $medium: 768px;
 .excl-class{
   margin-top: 18px;
 }
+#product_category{
+  width: 100%;
+  border-color: #ced4da;
+  height: 27px;
+}
+.shipping label{
+  width: 100%;
+text-align: right;
+}
 #currency{
   width: 100%;
   height: 28px;
   border-color: #a1a0a0;
 }
+.drop-weight{
+  padding-left: 0px;
+}
 .m-8{
   margin-top: 60px;
+}
+#weight{
+  height: 27px;
+    border-radius: 4px;
+    border-color: #ced4da;
+}
+.save-btn{
+  width: 100%;
+font-family: 'Futura B';
+    font-size: 10px;
+    color: #fff;
+    background: #000;
+    border-radius: unset;
+    
+}
+.next-btn{
+    width: 100%;
+font-family: 'Futura B';
+    font-size: 10px;
+    color: #fff;
+    background: #000;
+    border-radius: unset;
+    margin-top: 5px;
+}
+.cancel-btn {
+    width: 100%;
+    font-family: 'Futura B';
+    font-size: 10px;
+    color:#000;
+    background:  #fff;
+    border-radius: unset;
+    border: 2px solid;
+    border-color: black;
+    margin: 0px !important;
+   
+
+
 }
 .btn-dark{
    
@@ -115,10 +164,19 @@ $medium: 768px;
   height: 28px;
   border-color: #a1a0a0;
 }
+.suitable{
+  padding-top: 50px;
+}
+.skin-section{
+  margin-top: -21px;
+}
 #sale_tax_type{
   width: 100%;
   height: 28px;
   border-color: #a1a0a0;
+}
+.labels label{
+  text-align: left;
 }
 .imp-link{
 color: #a1a0a0;
@@ -126,6 +184,7 @@ color: #a1a0a0;
 .red-note{
   color: red;
   line-height: 1.3;
+  text-align: left;
 }
 .input-design-1{
   

@@ -7,16 +7,18 @@ import {CompanyComponent} from "./company/company.component";
 import {ProductInfoComponent} from "./productInfo/productInfo.component";
 import {ProductsComponent} from "./products/products.component";
 import {SyncingComponent} from "./syncing/syncing.component";
+import {ProductGridComponent} from "./productGrid/productGrid.component";
 
 const routes: Routes = [
-  { path: '', component: LoginComponent },
-  { path: 'register', component: RegisterComponent },
-  { path: 'billing', component: BillingComponent },
-  { path: 'company', component: CompanyComponent },
-  { path: 'product-info', component: ProductInfoComponent },
-  { path: 'products', component: ProductsComponent },
-  { path: 'syncing', component: SyncingComponent },
-  { path: '**', component: LoginComponent }
+{ path: '', component: LoginComponent },
+{ path: 'register', component: RegisterComponent },
+{ path: 'billing', component: BillingComponent },
+{ path: 'company', component: CompanyComponent },
+{ path: 'product-detail', component: ProductGridComponent },  
+{ path: 'product-info', component: ProductInfoComponent },
+{ path: 'products', component: ProductsComponent },
+{ path: 'syncing', component: SyncingComponent },
+{ path: '**', component: LoginComponent }
 ];
 
 @NgModule({
