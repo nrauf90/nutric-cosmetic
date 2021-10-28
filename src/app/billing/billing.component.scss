@@ -62,3 +62,45 @@ $medium: 768px;
     }
   }
 }
+.col-form-label{
+  font-size: 15px;
+  font-color: #a1a0a0;
+  padding: 0;
+  text-align: right;
+
+}
+.custom-radius{
+
+  border-radius: unset;
+  height: 33px;
+}
+.drp-bx{
+  width: 100%;
+  border-color: #ced4da;
+}
+.save-btn{
+  width: 100%;
+font-family: 'Futura B';
+    font-size: 10px;
+    color: #fff;
+    background: #000;
+    border-radius: unset;
+    
+}
+.cancel-btn {
+    width: 100%;
+    font-family: 'Futura B';
+    font-size: 10px;
+    color:#000;
+    background:  #fff;
+    border-radius: unset;
+    border: 2px solid;
+    border-color: black;
+    margin: 0px !important;
+}
+.btn-pd{
+  padding-top: 140px;
+}
+.sec-pd{
+  padding-top: 30px;
+}

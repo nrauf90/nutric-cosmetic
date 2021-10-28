@@ -123,9 +123,12 @@ font-family: 'Futura B';
     border: 2px solid;
     border-color: black;
     margin: 0px !important;
-   
-
-
+}
+.prg{
+  margin-top: -20px;
+}
+#product-var{
+  margin-top: 10px;
 }
 .btn-dark{
    
@@ -143,6 +146,10 @@ font-family: 'Futura B';
   border: 1px solid lightgrey;
   padding: 40px;
   margin: 20px;
+}
+.mrg label{
+  text-align: left !important;
+  margin-bottom: 9px;
 }
 #product_type{
       width: 250px;
@@ -175,6 +182,18 @@ font-family: 'Futura B';
   height: 28px;
   border-color: #a1a0a0;
 }
+.lb-mr{
+  margin-top: 5px;
+}
+.f-txt{
+      text-align: right;
+    padding-right: 10px !important;
+}
+.labels{
+  padding: 0px;
+  
+}
+
 .labels label{
   text-align: left;
 }
@@ -182,6 +201,7 @@ font-family: 'Futura B';
 color: #a1a0a0;
 }
 .red-note{
+font-family: 'Futura M';
   color: red;
   line-height: 1.3;
   text-align: left;
@@ -193,7 +213,10 @@ color: #a1a0a0;
         padding: 1px;
     padding-left: 6px;
 }
-
+.title-row{
+  margin-top: -28px;
+  margin-left: -24px;
+}
 .title-row h5:after{
         font-family: FontAwesome;
   content: "\f054";
@@ -209,9 +232,12 @@ border-radius: unset;
     height: 35px!important;
         
 }
-
+.cls-stng{
+ width: 374px;
+}
 .label-title{
   text-align: right;
+ 
 }
 label{
   text-align: right;

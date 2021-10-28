@@ -19,7 +19,7 @@
     <div class="col-lg-2">  <label>Brief Product Description*</label></div>
     <div class="col-lg-6"> <input type="text" name="product_desc" class="form-control input-design-1" placeholder="Please enter between 3-7 characters"></div>
     <div class="col-lg-2">
-        <a href="#" class="imp-link"> Why we need this?</a>
+        <a href="#" class="imp-link">Need Help?</a>
       </div>
   </div>
   <div class="row">
@@ -63,10 +63,10 @@
         <input type="text" name="product_type" class="form-control input-design bar" placeholder="Please specify">    
         <label for="product-var" style="padding-left: 0px;"> 
       <input type="checkbox" id="product-var" name="product-var" value="product">
-     this product has multiple varient</label>
+     Does this product have varient?</label>
   </div>
   <div class="col-lg-2 label-title">
-         <a href="#" class="imp-link" style="float: left;padding-top: 30px; "> What id a variant?</a>
+         <a href="#" class="imp-link" style="float: left;padding-top: 30px; "> What is a variant?</a>
     </div>
     <div class="col-lg-2 label-title">
        <p class="red-note">This product has multiple option like different size, color or flavour</p>
@@ -88,9 +88,11 @@
     <div class="col-lg-2"><label>RRP*</label></div>
   <div class="col-lg-3"> 
   <input type="number" name="price" class="form-control input-design-1" placeholder="0.00">
-  <label for="product-chr"> 
+  <div class="mrg">  <label for="product-chr"> 
     <input type="checkbox" id="product-chr" name="product-chr" value="product">
    Charge Tax On This Product</label>
+   </div>
+
 </div>
 <div class="col-lg-2"><label>Price Excl.Tax</label></div>
   <div class="col-lg-3">
@@ -137,7 +139,7 @@
     <input type="number" name="price_excl_tax" class="form-control input-design-1" placeholder="0.00"> 
 </div>
 <div class="col-lg-2">
-    <label>Currency*</label></div>
+    <label>Currency</label></div>
   <div class="col-lg-3">
    <select name="currency" id="currency">
     <option value="GBP">GBP</option>
@@ -218,7 +220,7 @@
   </div>
     
   <div class="col-lg-8">
- <input type="number" name="HS_code" class="form-control input-design-1" placeholder="Search or enter HS code">
+ <input type="number" name="HS_code" class="form-control input-design-1" placeholder="Search or enter a HS code">
  <p class="imp-link"><i>*Manually enter the codes that are longer than 6 numbers</i></p>
    </div>
 </div>
@@ -230,7 +232,7 @@
 <input type="text" name="prohibited_country" class="form-control input-design-1" placeholder="Select country or region">
    </div>
    <div class="col-lg-2">
-      <a href="#" class="imp-link">Why do we need this?</a>
+      <a href="#" class="imp-link">What does this mean?</a>
    </div>
 </div>
 </section>
@@ -259,12 +261,12 @@
        <p class="red-note">Cosmetic Consumable Accessory Apparel Technology</p>
 </div>
 </div>
-<div class="row shipping">
-<p>From the following,please select which apply to the product:</p>
+<div class="row shipping ">
+<p class="prg">From the following,please select which apply to the product:</p>
 </div>
-<div class="row shipping">
-  <div class="col-lg-5"></div>
-  <div class="col-lg-4 labels">
+<div class="row shipping ">
+  <div class="col-lg-5 labels"></div>
+  <div class="col-lg-3 labels">
    
   <label for="Alcohol"> <input type="checkbox" id="Alcohol" name="Alcohol" value="category"> Alcohol Free</label>
 
@@ -286,21 +288,22 @@
   <label for="Tested"> <input type="checkbox" id="Tested" name="Tested" value="category">  Determatological Tested</label>
   
   <label for="Clinically"> <input type="checkbox" id="Clinically" name="Clinically" value="category"> Clinically Proven</label>
-  <input type="text" name="category" class="form-control input-design-1" placeholder="Please upload result here">
+  <input type="text" name="category" class="form-control  input-design-1" placeholder="Please upload result here">
 
   </div>
 </div>
-<div class="row shipping suitable">
-  <div class="col-lg-5">
-    <label>Is This Product Not Suitable For AnOne In Particular:</label>
+<div class="row  suitable">
+  <div class="col-lg-5 labels f-txt">
+    <label >Is This Product Not Suitable For AnOne In Particular:</label>
 
   </div>
     
-  <div class="col-lg-4">
-<input type="text" name="category" class="form-control input-design-1" placeholder="Please specify here">
+  <div class="col-lg-3 labels">
+<input type="text" name="category" class="form-control input-design-1 " placeholder="Please specify here">
  
 </div>
-  <div class="col-lg-3 label-title">
+  <div class="col-lg-2"></div>
+  <div class="col-lg-2 label-title">
        <a href="#" class="imp-link">What Does This Mean?</a>
 </div>
 </div>
@@ -338,8 +341,8 @@
   <h5 style="margin-bottom: 30px;">SKIN</h5>
   </div>
    <div class="row shipping">
-  <div class="col-lg-3" style="padding: 0px;">
-    <p>Which Product Statement is true:</p>
+  <div class="col-lg-6" style="padding: 0px;">
+    <p>Which Product Statement(s) are true:</p>
   </div>
 </div>
   <div class="row shipping">

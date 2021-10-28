@@ -80,7 +80,6 @@ body {
 }
 @import "~bootstrap/dist/css/bootstrap.css";
 @import "~font-awesome/css/font-awesome.css";
-
 .page-title{
   font-family: 'Futura B';
   letter-spacing: 10px;
@@ -101,31 +100,4 @@ ul li{
  font-family: 'Futura';
  font-size:18px;
 
-}
-input[type=text]{
-  width: 50%;
-  border-radius: 0;
-  padding: 4px 10px;
-}
-
-.btn.btn-black{
-color: #fff;
-background: #000;
-border-radius: 0;
-padding: 6px 45px;
-letter-spacing: 2px;
-font-size: 10px;
-font-weight: 800;
-border:1px solid #000;
-}
-
-.btn.btn-white{
-    color: #000;
-    background: #fff;
-    border-radius: 0;
-    padding: 6px 45px;
-    letter-spacing: 2px;
-    font-size: 10px;
-    font-weight: 800;
-    border:1px solid #000;
 }
